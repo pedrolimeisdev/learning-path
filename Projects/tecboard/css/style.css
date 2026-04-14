@@ -1,117 +1,116 @@
 /* Definiçao de fontes */
 
 @font-face {
-    font-family: "Unbounded";
-    src: url(../fonts/Unbounded-Bold.ttf)
-    format("truetype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+    font-family: "Unbounded"; /* Nome que será usado para chamar a fonte */
+    src: url(../fonts/Unbounded-Bold.ttf) /* Caminho do arquivo da fonte */
+    format("truetype"); /* Formato do arquivo para o navegador identificar */
+    font-weight: 700; /* Define o peso (negrito) desta fonte específica */
+    font-style: normal; /* Define que o estilo não é itálico */
+    font-display: swap; /* Mostra uma fonte padrão até que esta carregue totalmente */
 }
 
 @font-face {
-    font-family: "Poppins";
-    src: url(../fonts/Poppins-Regular.ttf)
-    format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+    font-family: "Poppins"; /* Nome que será usado para chamar a fonte */
+    src: url(../fonts/Poppins-Regular.ttf) /* Caminho do arquivo da fonte */
+    format("truetype"); /* Formato do arquivo */
+    font-weight: 400; /* Define o peso (normal) desta fonte */
+    font-style: normal; /* Define o estilo normal */
+    font-display: swap; /* Evita que o texto fique invisível durante o carregamento */
 }
 
 /* Reset */
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Remove as margens externas padrão de todos os elementos */
+    padding: 0; /* Remove os preenchimentos internos padrão de todos os elementos */
 }
 
 /* Estilo-Desktop */
 
 body{
-    background-color: #0E1014;
-    color: #FFFFFF;
+    background-color: #0E1014; /* Define a cor de fundo da página */
+    color: #FFFFFF; /* Define a cor do texto de toda a página */
 }
 
 header img{
-    display: block;
-    margin: 75px 0 0 360px;
+    display: block; /* Força a imagem a se comportar como um bloco (ocupa a linha) */
+    margin: 75px 0 0 360px; /* Define as margens: topo (75px), direita (0), baixo (0), esquerda (360px) */
 }
 
 h1{
-    font-size: 64px;
-    font-family: "Unbounded", "sans-serif";
-    font-weight: bold;
-    text-align: center;
-    margin-top: 60px;
+    font-size: 64px; /* Define o tamanho da fonte do título */
+    font-family: "Unbounded", "sans-serif"; /* Aplica a fonte Unbounded com backup em sans-serif */
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-align: center; /* Alinha o texto no centro horizontalmente */
+    margin-top: 60px; /* Cria um espaço acima do título */
 }
 
 p{
-    font-size: 24px;
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-    width: 792px;
-    margin: 24px auto 0;
+    font-size: 24px; /* Define o tamanho da fonte do parágrafo */
+    font-family: "Poppins", sans-serif; /* Aplica a fonte Poppins */
+    text-align: center; /* Centraliza o texto */
+    width: 792px; /* Define uma largura fixa para o bloco de texto */
+    margin: 24px auto 0; /* Margem superior de 24px e 'auto' nas laterais para centralizar o bloco */
 }
 
 h1 span{
-    color: #9747FF;
+    color: #9747FF; /* Altera a cor de uma parte específica do texto dentro do h1 */
 }
 
 a{
-    color: #FFFFFF;
-    font-family: "Poppins", sans-serif;
-    font-size: 24px;
-    text-decoration: none;
-    background-color: #9747FF;
-    width: 340px;
-    height: 66px;
-    display: block;
-    text-align: center;
-    line-height: 66px;
-    border-radius: 36px;
-    margin: 100px auto;
+    color: #FFFFFF; /* Cor do texto do link */
+    font-family: "Poppins", sans-serif; /* Fonte do link */
+    font-size: 24px; /* Tamanho do texto do link */
+    text-decoration: none; /* Remove o sublinhado padrão de links */
+    background-color: #9747FF; /* Cor de fundo (estilo botão) */
+    width: 340px; /* Largura do botão */
+    height: 66px; /* Altura do botão */
+    display: block; /* Permite aplicar largura e altura ao link */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    line-height: 66px; /* Centraliza o texto verticalmente (mesmo valor da altura) */
+    border-radius: 36px; /* Arredonda os cantos do botão */
+    margin: 100px auto; /* Espaço de 100px em cima/baixo e centraliza lateralmente */
 }
 
 a:hover{
-    background-color: #8223E8;
+    background-color: #8223E8; /* Altera a cor de fundo quando o mouse está sobre o link */
 }
 
 section img{
-    display:block;
-    width: 792px;
-    height: 446px;
-    margin: 0 auto;
+    display:block; /* Transforma a imagem em bloco */
+    width: 792px; /* Define a largura da imagem */
+    height: 446px; /* Define a altura da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
 } 
     
 @media(max-width: 768px){
 
     header img{
-        margin:65px 0 0 60px;
+        margin:65px 0 0 60px; /* Ajusta a posição da imagem para tablets */
     }
 
     p{
-        width: 648px;
+        width: 648px; /* Reduz a largura do parágrafo em telas médias */
     }
 
 }
 
 @media(max-width: 375px){
     header img{
-        margin: 32px 0 0 16px
+        margin: 32px 0 0 16px; /* Ajusta a posição da imagem para celulares pequenos */
     }
     h1{
-        font-size: 40px;
+        font-size: 40px; /* Reduz o tamanho do título para caber na tela do celular */
     }
     p{
-        font-size: 20px;
-        width: 340px;
+        font-size: 20px; /* Diminui a fonte do texto para melhor leitura em telas pequenas */
+        width: 340px; /* Ajusta a largura do texto para a tela mobile */
     }
     a{
-        font-size: 20px;
-        width: 251px;
+        font-size: 20px; /* Reduz a fonte do botão */
+        width: 251px; /* Ajusta a largura do botão no celular */
     }
     section img{
-        width: 340px;
-        height: 230px;
-
+        width: 340px; /* Redimensiona a largura da imagem da seção */
+        height: 230px; /* Redimensiona a altura da imagem da seção */
     }
 }
