@@ -1,0 +1,43 @@
+/* --- BOTÃO CTA --- */
+.action-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--header-bg);
+    color: white;
+    padding: 16px 44px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: background 0.25s ease, transform 0.2s ease;
+    box-shadow: 0 5px 18px rgba(0, 43, 69, 0.28);
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background: var(--accent-orange);
+    transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+    .action-bar {
+        /* Ocupa a largura toda no mobile, igual ao padrão de apps */
+        width: 100%;
+        padding: 0 4px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 13px;
+        box-sizing: border-box;
+    }
+}

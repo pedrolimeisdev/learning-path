@@ -1,0 +1,44 @@
+/* --- INFO CARD --- */
+.info-card {
+    background: var(--card-bg);
+    padding: 32px 50px;
+    border-radius: 16px;
+    border-left: 4px solid var(--accent-orange);
+    box-shadow: 0 8px 28px var(--shadow-sm);
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Barra laranja decorativa acima do título */
+.card-accent-bar {
+    width: 36px;
+    height: 3px;
+    background: var(--accent-orange);
+    border-radius: 2px;
+    margin: 0 auto 16px;
+}
+
+.info-card h1 {
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.info-card p {
+    color: var(--text-muted);
+    line-height: 1.65;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .info-card {
+        padding: 24px 20px;
+        border-radius: 12px;
+    }
+
+    .info-card h1 { font-size: 20px; }
+    .info-card p { font-size: 13px; }
+}

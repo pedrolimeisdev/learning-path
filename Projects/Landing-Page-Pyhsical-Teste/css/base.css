@@ -1,0 +1,14 @@
+:root {
+    --bg-light: #ebf0f3;
+    --card-bg: #ffffff;
+    --header-bg: #002B45;
+    --accent-orange: #f7941d;
+    --accent-blue: #007bff;
+    --text-main: #002B45;
+    --text-muted: #6b7c8d;
+    --shadow-sm: rgba(0, 43, 69, 0.08);
+    --shadow-md: rgba(0, 43, 69, 0.14);
+    --shadow-orange: rgba(247, 148, 29, 0.20);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }

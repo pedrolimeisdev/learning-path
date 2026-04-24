@@ -1,0 +1,244 @@
+/* --- GRADE DE TÓPICOS (DESKTOP) --- */
+.topics-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 48px;
+    width: 100%;
+}
+
+.topic-box {
+    background: var(--card-bg);
+    border: 1.5px solid #dce4ec;
+    border-radius: 14px;
+    width: 135px;
+    height: 155px;
+    cursor: pointer;
+    box-shadow: 0 3px 12px var(--shadow-sm);
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 18px 10px 14px;
+    gap: 10px;
+}
+
+.topic-box:hover {
+    border-color: var(--header-bg);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px var(--shadow-md);
+}
+
+.topic-box.active {
+    border-color: var(--accent-orange);
+    background-color: #fff8f0;
+    box-shadow: 0 6px 20px var(--shadow-orange);
+}
+
+/* --- ÍCONE SVG (compartilhado entre desktop e mobile) --- */
+.box-icon-wrap {
+    width: 46px;
+    height: 46px;
+    border-radius: 11px;
+    background: #eef3f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s ease;
+    flex-shrink: 0;
+}
+
+.box-icon-wrap svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--header-bg);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.25s ease;
+}
+
+.topic-box.active .box-icon-wrap,
+.scroll-card.active .box-icon-wrap {
+    background: var(--accent-orange);
+}
+
+.topic-box.active .box-icon-wrap svg,
+.scroll-card.active .box-icon-wrap svg {
+    stroke: #ffffff;
+}
+
+.topic-box:hover:not(.active) .box-icon-wrap,
+.scroll-card:hover:not(.active) .box-icon-wrap {
+    background: #dce6ee;
+}
+
+/* --- RÓTULO DO BOTÃO (compartilhado) --- */
+.box-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    line-height: 1.35;
+    transition: color 0.25s;
+}
+
+.topic-box.active .box-title,
+.scroll-card.active .box-title {
+    color: var(--text-main);
+}
+
+/* =========================================
+    SCROLL HORIZONTAL — MOBILE ONLY
+   ========================================= */
+
+/* Oculta no desktop, mostra no mobile */
+.topics-mobile  { display: none; }
+.topics-desktop { display: flex;  }
+
+/* --- HINT "deslize para ver mais" --- */
+.scroll-hint {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--header-bg);
+    border-radius: 10px;
+    padding: 11px 16px;
+    margin-bottom: 12px;
+}
+
+.scroll-hint-left {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.scroll-hint-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-orange);
+    flex-shrink: 0;
+}
+
+.scroll-hint span {
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.scroll-hint-arrows {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.scroll-hint-arrows svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--accent-orange);
+    fill: none;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: arrowPulse 1.4s ease-in-out infinite;
+}
+
+.scroll-hint-arrows svg:last-child {
+    opacity: 0.4;
+}
+
+@keyframes arrowPulse {
+    0%, 100% { transform: translateX(0);   opacity: 1;   }
+    50%       { transform: translateX(4px); opacity: 0.5; }
+}
+
+/* --- TRILHA DE SCROLL --- */
+.scroll-track {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 4px 4px 12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-bottom: 12px;
+}
+
+.scroll-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- CARD DO SCROLL --- */
+.scroll-card {
+    background: var(--card-bg);
+    border: 1.5px solid #dce4ec;
+    border-radius: 14px;
+    width: 115px;      /* fixo — garante todos iguais */
+    height: 140px;     /* fixo — sem variação por conteúdo */
+    cursor: pointer;
+    box-shadow: 0 3px 12px var(--shadow-sm);
+    transition: all 0.22s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 14px 8px;
+    gap: 9px;
+    scroll-snap-align: start;
+    flex-shrink: 0;    /* impede encolher no flex */
+    flex-grow: 0;      /* impede crescer no flex */
+}
+
+.scroll-card.active {
+    border-color: var(--accent-orange);
+    background-color: #fff8f0;
+    box-shadow: 0 6px 20px var(--shadow-orange);
+}
+
+/* --- DOTS DE PROGRESSO --- */
+.scroll-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 4px;
+    margin-bottom: 24px;
+}
+
+.scroll-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #dce4ec;
+    transition: all 0.25s ease;
+    display: inline-block;
+}
+
+.scroll-dot.active {
+    background: var(--accent-orange);
+    width: 16px;
+    border-radius: 3px;
+}
+
+/* =========================================
+    RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 600px) {
+    /* Troca grade ↔ scroll */
+    .topics-desktop { display: none;  }
+    .topics-mobile  { display: block; width: 100%; margin-bottom: 8px; }
+
+    .box-icon-wrap { width: 42px; height: 42px; }
+    .box-icon-wrap svg { width: 20px; height: 20px; }
+    .box-title { font-size: 9px; }
+}

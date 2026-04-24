@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Avaliação Física</title>
+    <link rel="preload" as="image" href="img/celular600-img-1.png" media="(max-width: 600px)">
+    <link rel="preload" as="image" href="img/tablet1024-img-1.jpeg" media="(min-width: 601px) and (max-width: 1024px)">
+    <link rel="preload" as="image" href="img/desktop1920-img-1.jpeg" media="(min-width: 1025px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/background.css">
+    <link rel="stylesheet" href="/css/card.css">
+    <link rel="stylesheet" href="/css/topics.css">
+    <link rel="stylesheet" href="/css/button.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <img src="img/logophysical-test.png" alt="Physical Test Logo" class="logo-img">
+        </div>
+    </header>
+
+    <div class="background-container">
+        <picture>
+            <source media="(max-width: 600px)" srcset="img/celular600-img-1.png">
+            <source media="(min-width: 601px) and (max-width: 1024px)" srcset="img/tablet1024-img-1.jpeg">
+            <img src="img/desktop1920-img-1.jpeg" alt="Background Physical Test">
+        </picture>
+    </div>
+
+    <main class="main-content">
+
+        <div id="content-section" class="info-card">
+            <div class="card-accent-bar"></div>
+            <h1 id="main-title">Medidas Corporais</h1>
+            <p id="main-description">
+                Visualização detalhada das medidas antropométricas do aluno, incluindo perímetros e dobras cutâneas.
+                Ideal para o acompanhamento da evolução da composição corporal.
+            </p>
+        </div>
+
+        <!-- GRADE DESKTOP (oculta no mobile) -->
+        <div class="topics-container topics-desktop">
+
+            <button class="topic-box active"
+                onclick="changeContent('Medidas Corporais', 'Visualização detalhada das medidas antropométricas do aluno, incluindo perímetros e dobras cutâneas. Ideal para o acompanhamento da composição corporal.', this)">
+                <div class="box-icon-wrap">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12h18M3 6h6M3 18h6M15 6l3 3-3 3"/>
+                    </svg>
+                </div>
+                <span class="box-title">Medidas Corporais</span>
+            </button>
+
+            <button class="topic-box"
+                onclick="changeContent('Composição Corporal', 'Fracionamento da massa total. Mensuração de %G (percentual de gordura) e MLG (massa livre de gordura) via dobras ou BIA.', this)">
+                <div class="box-icon-wrap">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="8" r="4"/>
+                        <path d="M6 20v-1a6 6 0 0 1 12 0v1"/>
+                        <path d="M17 11l2 2 4-4"/>
+                    </svg>
+                </div>
+                <span class="box-title">Composição Corporal</span>
+            </button>
+
+            <button class="topic-box"
+                onclick="changeContent('Anamnese', 'Triagem clínica e histórico pregresso. Serve para identificar contraindicações e alinhar o objetivo (meta) com o estilo de vida.', this)">
+                <div class="box-icon-wrap">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+                        <rect x="9" y="3" width="6" height="4" rx="2"/>
+                        <path d="M9 12h6M9 16h4"/>
+                    </svg>
+                </div>
+                <span class="box-title">Anamnese</span>
+            </button>
+
+            <button class="topic-box"
+                onclick="changeContent('Par-Q', 'Protocolo de estratificação de risco. Filtro de segurança obrigatório para identificar a necessidade de liberação médica.', this)">
+                <div class="box-icon-wrap">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                </div>
+                <span class="box-title">Par-Q</span>
+            </button>
+
+            <button class="topic-box"
+                onclick="changeContent('Cardio Respiratório', 'Avaliação da capacidade funcional e VO2 máx. Determina as zonas de intensidade para o treino aeróbico.', this)">
+                <div class="box-icon-wrap">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                </div>
+                <span class="box-title">Cardio Respiratório</span>
+            </button>
+
+            <button class="topic-box"
+                onclick="changeContent('Neuromotores', 'Testes de valências físicas (força, flexibilidade e resistência). Analisa o padrão de movimento e o recrutamento motor.', this)">
+                <div class="box-icon-wrap">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                </div>
+                <span class="box-title">Neuromotores</span>
+            </button>
+
+            <button class="topic-box"
+                onclick="changeContent('Treinos com IA', 'Geração de planos de treinamento otimizados pela IA com base nos dados individuais de cada aluno.', this)">
+                <div class="box-icon-wrap">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                        <path d="M17.5 14v3M14 17.5h7"/>
+                    </svg>
+                </div>
+                <span class="box-title">Treinos com IA</span>
+            </button>
+
+        </div>
+
+        <!-- SCROLL HORIZONTAL MOBILE (oculto no desktop) -->
+        <div class="topics-mobile">
+
+            <div class="scroll-hint">
+                <div class="scroll-hint-left">
+                    <div class="scroll-hint-dot"></div>
+                    <span>Deslize para ver mais</span>
+                </div>
+                <div class="scroll-hint-arrows">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M15 8l4 4-4 4"/></svg>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M15 8l4 4-4 4"/></svg>
+                </div>
+            </div>
+
+            <div class="scroll-track" id="scrollTrack">
+
+                <button class="scroll-card active"
+                    onclick="changeContentMobile('Medidas Corporais', 'Visualização detalhada das medidas antropométricas do aluno, incluindo perímetros e dobras cutâneas.', this, 0)">
+                    <div class="box-icon-wrap">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12h18M3 6h6M3 18h6M15 6l3 3-3 3"/>
+                        </svg>
+                    </div>
+                    <span class="box-title">Medidas Corporais</span>
+                </button>
+
+                <button class="scroll-card"
+                    onclick="changeContentMobile('Composição Corporal', 'Fracionamento da massa total. Mensuração de %G e MLG via dobras ou BIA.', this, 1)">
+                    <div class="box-icon-wrap">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M6 20v-1a6 6 0 0 1 12 0v1"/>
+                            <path d="M17 11l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <span class="box-title">Composição Corporal</span>
+                </button>
+
+                <button class="scroll-card"
+                    onclick="changeContentMobile('Anamnese', 'Triagem clínica e histórico pregresso. Identifica contraindicações e alinha o objetivo com o estilo de vida.', this, 2)">
+                    <div class="box-icon-wrap">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+                            <rect x="9" y="3" width="6" height="4" rx="2"/>
+                            <path d="M9 12h6M9 16h4"/>
+                        </svg>
+                    </div>
+                    <span class="box-title">Anamnese</span>
+                </button>
+
+                <button class="scroll-card"
+                    onclick="changeContentMobile('Par-Q', 'Protocolo de estratificação de risco. Filtro de segurança obrigatório para liberação médica.', this, 3)">
+                    <div class="box-icon-wrap">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <span class="box-title">Par-Q</span>
+                </button>
+
+                <button class="scroll-card"
+                    onclick="changeContentMobile('Cardio Respiratório', 'Avaliação do VO2 máx. Determina as zonas de intensidade para o treino aeróbico.', this, 4)">
+                    <div class="box-icon-wrap">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <span class="box-title">Cardio Respiratório</span>
+                </button>
+
+                <button class="scroll-card"
+                    onclick="changeContentMobile('Neuromotores', 'Testes de força, flexibilidade e resistência. Analisa padrão de movimento e recrutamento motor.', this, 5)">
+                    <div class="box-icon-wrap">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <span class="box-title">Neuromotores</span>
+                </button>
+
+                <button class="scroll-card"
+                    onclick="changeContentMobile('Treinos com IA', 'Geração de planos de treinamento otimizados pela IA com base nos dados individuais.', this, 6)">
+                    <div class="box-icon-wrap">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="7" height="7" rx="1"/>
+                            <rect x="14" y="3" width="7" height="7" rx="1"/>
+                            <rect x="3" y="14" width="7" height="7" rx="1"/>
+                            <path d="M17.5 14v3M14 17.5h7"/>
+                        </svg>
+                    </div>
+                    <span class="box-title">Treinos com IA</span>
+                </button>
+
+            </div>
+
+            <!-- Indicadores de progresso (dots) -->
+            <div class="scroll-dots" id="scrollDots">
+                <span class="scroll-dot active"></span>
+                <span class="scroll-dot"></span>
+                <span class="scroll-dot"></span>
+                <span class="scroll-dot"></span>
+                <span class="scroll-dot"></span>
+                <span class="scroll-dot"></span>
+                <span class="scroll-dot"></span>
+            </div>
+
+        </div>
+
+        <div class="action-bar">
+            <a href="https://www.physicaltest.com.br/" id="external-href" class="btn-primary">Faça sua avaliação completa</a>
+        </div>
+
+    </main>
+
+    <script>
+        // --- DESKTOP ---
+        function changeContent(title, text, clickedElement) {
+            document.getElementById('main-title').innerText = title;
+            document.getElementById('main-description').innerText = text;
+            var boxes = document.getElementsByClassName('topic-box');
+            for (var i = 0; i < boxes.length; i++) {
+                boxes[i].classList.remove('active');
+            }
+            clickedElement.classList.add('active');
+        }
+
+        // --- MOBILE ---
+        function changeContentMobile(title, text, clickedElement, dotIndex) {
+            document.getElementById('main-title').innerText = title;
+            document.getElementById('main-description').innerText = text;
+            var cards = document.getElementsByClassName('scroll-card');
+            for (var i = 0; i < cards.length; i++) {
+                cards[i].classList.remove('active');
+            }
+            clickedElement.classList.add('active');
+            updateDot(dotIndex);
+        }
+
+        function updateDot(index) {
+            var dots = document.getElementsByClassName('scroll-dot');
+            for (var i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('active');
+            }
+            if (dots[index]) dots[index].classList.add('active');
+        }
+
+        // Atualiza dot ao scrollar manualmente
+        var track = document.getElementById('scrollTrack');
+        if (track) {
+            track.addEventListener('scroll', function () {
+                var cardWidth = 120;
+                var index = Math.round(track.scrollLeft / cardWidth);
+                updateDot(index);
+            });
+        }
+
+        // Crossfade de slides (preparado para uso futuro)
+        var slides = document.querySelectorAll('.bg-slide');
+        var currentSlide = 0;
+        if (slides.length > 0) {
+            setInterval(function () {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 5000);
+        }
+    </script>
+
+</body>
+</html>
